@@ -33,6 +33,7 @@ Partial Class frmSefyllfa1
         Me.txtEnw = New System.Windows.Forms.TextBox()
         Me.btnSefyllfa2 = New System.Windows.Forms.Button()
         Me.btnSefyllfa3 = New System.Windows.Forms.Button()
+        Me.btnSefyllfa4 = New System.Windows.Forms.Button()
         Me.gbFfactorau.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -140,11 +141,21 @@ Partial Class frmSefyllfa1
         Me.btnSefyllfa3.Text = "Sefyllfa 3"
         Me.btnSefyllfa3.UseVisualStyleBackColor = True
         '
+        'btnSefyllfa4
+        '
+        Me.btnSefyllfa4.Location = New System.Drawing.Point(228, 216)
+        Me.btnSefyllfa4.Name = "btnSefyllfa4"
+        Me.btnSefyllfa4.Size = New System.Drawing.Size(67, 36)
+        Me.btnSefyllfa4.TabIndex = 9
+        Me.btnSefyllfa4.Text = "Sefyllfa 4"
+        Me.btnSefyllfa4.UseVisualStyleBackColor = True
+        '
         'frmSefyllfa1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(307, 291)
+        Me.Controls.Add(Me.btnSefyllfa4)
         Me.Controls.Add(Me.btnSefyllfa3)
         Me.Controls.Add(Me.btnSefyllfa2)
         Me.Controls.Add(Me.txtEnw)
@@ -172,4 +183,5 @@ Partial Class frmSefyllfa1
     Friend WithEvents txtEnw As System.Windows.Forms.TextBox
     Friend WithEvents btnSefyllfa2 As System.Windows.Forms.Button
     Friend WithEvents btnSefyllfa3 As System.Windows.Forms.Button
+    Friend WithEvents btnSefyllfa4 As System.Windows.Forms.Button
 End Class
