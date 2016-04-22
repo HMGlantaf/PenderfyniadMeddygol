@@ -64,7 +64,7 @@
     End Sub
 
     Private Sub btnSefyllfa3_Click(sender As Object, e As EventArgs) Handles btnSefyllfa3.Click
-        'Rhaid cwrdd â phob un o'r ffactorau - AC [AND]
+        'Rhaid cwrdd ag o leiaf 2 o'r ffactorau
 
         'Gosod gwerthoedd cychwynol y 3 ffactor
         Dim A As Boolean = False
@@ -81,7 +81,7 @@
         Mewnbwn(Enw, A, B, C)
 
         'Penderfynu os yw'n gallu derbyn triniaeth
-        If  Then 'gallu
+        If (A And B) Or (A And C) Or (B And C) Then 'gallu
             Triniaeth = True
         Else 'Dim yn gallu
             Triniaeth = False

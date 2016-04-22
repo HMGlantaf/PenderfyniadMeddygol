@@ -91,7 +91,7 @@ Partial Class frmSefyllfa1
         '
         'btnSefyllfa1
         '
-        Me.btnSefyllfa1.Location = New System.Drawing.Point(228, 89)
+        Me.btnSefyllfa1.Location = New System.Drawing.Point(228, 71)
         Me.btnSefyllfa1.Name = "btnSefyllfa1"
         Me.btnSefyllfa1.Size = New System.Drawing.Size(67, 36)
         Me.btnSefyllfa1.TabIndex = 3
@@ -125,7 +125,7 @@ Partial Class frmSefyllfa1
         '
         'btnSefyllfa2
         '
-        Me.btnSefyllfa2.Location = New System.Drawing.Point(228, 132)
+        Me.btnSefyllfa2.Location = New System.Drawing.Point(228, 113)
         Me.btnSefyllfa2.Name = "btnSefyllfa2"
         Me.btnSefyllfa2.Size = New System.Drawing.Size(67, 36)
         Me.btnSefyllfa2.TabIndex = 7
@@ -134,7 +134,7 @@ Partial Class frmSefyllfa1
         '
         'btnSefyllfa3
         '
-        Me.btnSefyllfa3.Location = New System.Drawing.Point(228, 174)
+        Me.btnSefyllfa3.Location = New System.Drawing.Point(228, 155)
         Me.btnSefyllfa3.Name = "btnSefyllfa3"
         Me.btnSefyllfa3.Size = New System.Drawing.Size(67, 36)
         Me.btnSefyllfa3.TabIndex = 8
@@ -143,7 +143,7 @@ Partial Class frmSefyllfa1
         '
         'btnSefyllfa4
         '
-        Me.btnSefyllfa4.Location = New System.Drawing.Point(228, 216)
+        Me.btnSefyllfa4.Location = New System.Drawing.Point(228, 197)
         Me.btnSefyllfa4.Name = "btnSefyllfa4"
         Me.btnSefyllfa4.Size = New System.Drawing.Size(67, 36)
         Me.btnSefyllfa4.TabIndex = 9
