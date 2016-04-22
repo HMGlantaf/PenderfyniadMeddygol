@@ -91,6 +91,35 @@
         Allbwn(Enw, Triniaeth)
     End Sub
 
+    Private Sub btnSefyllfa4_Click(sender As Object, e As EventArgs) Handles btnSefyllfa4.Click
+        'Rhaid cwrdd ag o leiaf 2 o'r ffactorau , neu dim yn ysmygu
+
+        'Gosod gwerthoedd cychwynol y 3 ffactor
+        Dim A As Boolean = False
+        Dim B As Boolean = False
+        Dim C As Boolean = False
+
+        'Gwerth cychwynol triniaeth
+        Dim Triniaeth As Boolean = False
+
+        'Enw'r claf
+        Dim Enw As String = ""
+
+        'Darllen mewnbwn
+        Mewnbwn(Enw, A, B, C)
+
+        'Penderfynu os yw'n gallu derbyn triniaeth
+        If (A And B) Or (A And C) Or (B And C) Or B Then 'gallu
+            'If A And (B Or C) Or B Then 'gallu
+            Triniaeth = True
+        Else 'Dim yn gallu
+            Triniaeth = False
+        End If
+
+        'Allbynnu'r penderfyniad
+        Allbwn(Enw, Triniaeth)
+    End Sub
+
     Private Sub Mewnbwn(ByRef Enw As String, ByRef A As Boolean, ByRef B As Boolean, ByRef C As Boolean)
         'Darllen y mewnbwn
         'Enw
