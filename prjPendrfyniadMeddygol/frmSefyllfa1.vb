@@ -1,4 +1,8 @@
 ﻿Public Class frmSefyllfa1
+    'Awdur HM
+    'Ebrill 2016
+    'Dangos Algebra Booleaidd
+    'Datblygu ar gyfer ysgrifennu a darllen ffeil
 
     Private Sub frmSefyllfa1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Gosod gwerthoedd cychwynol y blwch
