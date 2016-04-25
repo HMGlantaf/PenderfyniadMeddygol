@@ -115,7 +115,7 @@
 
         'Penderfynu os yw'n gallu derbyn triniaeth
         If (A And B) Or (A And C) Or (B And C) Or B Then 'gallu
-            'If A And (B Or C) Or B Then 'gallu
+            'If (A And C) Or B Then 'gallu
             Triniaeth = True
         Else 'Dim yn gallu
             Triniaeth = False
