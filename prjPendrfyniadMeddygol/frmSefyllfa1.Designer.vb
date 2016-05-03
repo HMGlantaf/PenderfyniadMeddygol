@@ -34,6 +34,7 @@ Partial Class frmSefyllfa1
         Me.btnSefyllfa2 = New System.Windows.Forms.Button()
         Me.btnSefyllfa3 = New System.Windows.Forms.Button()
         Me.btnSefyllfa4 = New System.Windows.Forms.Button()
+        Me.btnArbed = New System.Windows.Forms.Button()
         Me.gbFfactorau.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -150,11 +151,21 @@ Partial Class frmSefyllfa1
         Me.btnSefyllfa4.Text = "Sefyllfa 4"
         Me.btnSefyllfa4.UseVisualStyleBackColor = True
         '
+        'btnArbed
+        '
+        Me.btnArbed.Location = New System.Drawing.Point(230, 256)
+        Me.btnArbed.Name = "btnArbed"
+        Me.btnArbed.Size = New System.Drawing.Size(64, 47)
+        Me.btnArbed.TabIndex = 10
+        Me.btnArbed.Text = "Arbed Manylion"
+        Me.btnArbed.UseVisualStyleBackColor = True
+        '
         'frmSefyllfa1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(307, 409)
+        Me.Controls.Add(Me.btnArbed)
         Me.Controls.Add(Me.btnSefyllfa4)
         Me.Controls.Add(Me.btnSefyllfa3)
         Me.Controls.Add(Me.btnSefyllfa2)
@@ -184,4 +195,5 @@ Partial Class frmSefyllfa1
     Friend WithEvents btnSefyllfa2 As System.Windows.Forms.Button
     Friend WithEvents btnSefyllfa3 As System.Windows.Forms.Button
     Friend WithEvents btnSefyllfa4 As System.Windows.Forms.Button
+    Friend WithEvents btnArbed As System.Windows.Forms.Button
 End Class

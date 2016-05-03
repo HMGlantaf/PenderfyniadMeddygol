@@ -1,4 +1,7 @@
-﻿Public Class frmSefyllfa1
+﻿'Llwytho llyfrgell o modylau safonnol ar gyfer trin a thrafod ffeiliau
+Imports System.IO
+
+Public Class frmSefyllfa1
     'Awdur HM
     'Ebrill 2016
     'Dangos Algebra Booleaidd
@@ -242,5 +245,51 @@
         End If
     End Sub
 
+    Private Sub btnArbed_Click(sender As Object, e As EventArgs) Handles btnArbed.Click
+        Dim objStreamWriter As StreamWriter 'galluogi ysgrifennu at ffeil
 
+        'Gosod gwerthoedd cychwynol y 3 ffactor
+        Dim A As Boolean = False
+        Dim B As Boolean = False
+        Dim C As Boolean = False
+        Dim CofA As String
+        Dim CofB As String
+        Dim CofC As String
+
+        'Enw'r claf
+        Dim Enw As String = ""
+        'Cofnod arbed
+        Dim Cofnod As String = ""
+        'Darllen y mewnbwn
+        Mewnbwn(Enw, A, B, C)
+
+        'Creu Cofnod 
+        'Newid y gwerth Boole i 1 [Gwir] neu 0 [Anwir]
+        If A Then
+            CofA = 1
+        Else
+            CofA = 0
+        End If
+        If B Then
+            CofB = 1
+        Else
+            CofB = 0
+        End If
+        If C Then
+            CofC = 1
+        Else
+            CofC = 0
+        End If
+        'Adeiladu'r cofnod, rhannu gyda ","
+        Cofnod = Enw & "," & CofA & "," & CofB & "," & CofC
+        'creu sianel newydd i ysgrifennu at y ffeil data.txt
+        objStreamWriter = New StreamWriter("data.txt", True)
+        MsgBox(My.Computer.FileSystem.CurrentDirectory)
+        'Ysgrifennu'r data allan i'r ffel
+        objStreamWriter.WriteLine(Cofnod)
+
+        'Cau'r sianel [ffeil]
+        objStreamWriter.Close()
+
+    End Sub
 End Class
