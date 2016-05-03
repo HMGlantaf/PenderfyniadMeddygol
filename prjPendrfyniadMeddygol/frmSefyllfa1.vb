@@ -1,4 +1,8 @@
 ﻿Public Class frmSefyllfa1
+    'Awdur HM
+    'Ebrill 2016
+    'Dangos Algebra Booleaidd
+    'Datblygu ar gyfer ysgrifennu a darllen ffeil
 
     'Cyfrif y nifer o gleifion
     Dim Cyfanswm1 As Integer = 0
@@ -35,6 +39,7 @@
         Dim Enw As String = ""
 
         'Canran gwrthod llawdriniaeth
+        Dim Canran1 As Single = 0.0
 
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
@@ -54,7 +59,8 @@
 
         'Allbynnu'r penderfyniad
         Allbwn(Enw, Triniaeth, Rheswm)
-
+        Canran1 = Gwrthod1 / Cyfanswm1
+        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 1 = " & FormatPercent(Canran1, 2) & "%"
     End Sub
 
     Private Sub btnSefyllfa2_Click(sender As Object, e As EventArgs) Handles btnSefyllfa2.Click
@@ -74,8 +80,14 @@
         'Enw'r claf
         Dim Enw As String = ""
 
+        'Canran gwrthod llawdriniaeth
+        Dim Canran2 As Single = 0.0
+
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
+
+        'Ychwanegu at y cyfanswm
+        Cyfanswm2 = Cyfanswm2 + 1
 
         'Penderfynu os yw'n gallu derbyn triniaeth
         If A And B And C Then 'gallu
@@ -84,10 +96,16 @@
             Triniaeth = False
             'Darganfod y rheswm am wrthod
             Y_Rheswm(Rheswm, A, B, C)
+            'Cynyddu nifer sy'n cael eu gwrthod
+            Gwrthod2 = Gwrthod2 + 1
         End If
 
         'Allbynnu'r penderfyniad
         Allbwn(Enw, Triniaeth, Rheswm)
+        'Darganfod ac allbynnu canran gwrthod
+        Canran2 = Gwrthod2 / Cyfanswm2
+        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 2 = " & FormatPercent(Canran2, 2) & "%"
+
     End Sub
 
     Private Sub btnSefyllfa3_Click(sender As Object, e As EventArgs) Handles btnSefyllfa3.Click
@@ -107,8 +125,14 @@
         'Enw'r claf
         Dim Enw As String = ""
 
+        'Canran gwrthod llawdriniaeth
+        Dim Canran3 As Single = 0.0
+
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
+
+        'Ychwanegu at y cyfanswm
+        Cyfanswm3 = Cyfanswm3 + 1
 
         'Penderfynu os yw'n gallu derbyn triniaeth
         If (A And B) Or (A And C) Or (B And C) Then 'gallu
@@ -118,10 +142,16 @@
             Triniaeth = False
             'Darganfod y rheswm am wrthod
             Y_Rheswm(Rheswm, A, B, C)
+            'Cynyddu nifer sy'n cael eu gwrthod
+            Gwrthod3 = Gwrthod3 + 1
         End If
 
         'Allbynnu'r penderfyniad
         Allbwn(Enw, Triniaeth, Rheswm)
+        'Darganfod ac allbynnu canran gwrthod
+        Canran3 = Gwrthod3 / Cyfanswm3
+        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 3 = " & FormatPercent(Canran3, 2) & "%"
+
     End Sub
 
     Private Sub btnSefyllfa4_Click(sender As Object, e As EventArgs) Handles btnSefyllfa4.Click
@@ -141,6 +171,12 @@
         'Enw'r claf
         Dim Enw As String = ""
 
+        'Canran gwrthod llawdriniaeth
+        Dim Canran4 As Single = 0.0
+
+        'Ychwanegu at y cyfanswm
+        Cyfanswm4 = Cyfanswm4 + 1
+
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
 
@@ -152,10 +188,16 @@
             Triniaeth = False
             'Darganfod y rheswm am wrthod
             Y_Rheswm(Rheswm, A, B, C)
+            'Cynyddu nifer sy'n cael eu gwrthod
+            Gwrthod4 = Gwrthod4 + 1
         End If
 
         'Allbynnu'r penderfyniad
         Allbwn(Enw, Triniaeth, Rheswm)
+        'Darganfod ac allbynnu canran gwrthod
+        Canran4 = Gwrthod4 / Cyfanswm4
+        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 4 = " & FormatPercent(Canran4, 2) & "%"
+
     End Sub
 
     Private Sub Mewnbwn(ByRef Enw As String, ByRef A As Boolean, ByRef B As Boolean, ByRef C As Boolean)

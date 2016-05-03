@@ -24,9 +24,9 @@ Partial Class frmSefyllfa1
     Private Sub InitializeComponent()
         Me.lblTeitl = New System.Windows.Forms.Label()
         Me.gbFfactorau = New System.Windows.Forms.GroupBox()
-        Me.chk_A_PwysauNormal = New System.Windows.Forms.CheckBox()
-        Me.chk_B_DimSmygu = New System.Windows.Forms.CheckBox()
         Me.chk_C_Yfed = New System.Windows.Forms.CheckBox()
+        Me.chk_B_DimSmygu = New System.Windows.Forms.CheckBox()
+        Me.chk_A_PwysauNormal = New System.Windows.Forms.CheckBox()
         Me.btnSefyllfa1 = New System.Windows.Forms.Button()
         Me.lblPenderfyniad = New System.Windows.Forms.Label()
         Me.lblEnw = New System.Windows.Forms.Label()
@@ -59,15 +59,15 @@ Partial Class frmSefyllfa1
         Me.gbFfactorau.TabStop = False
         Me.gbFfactorau.Text = "Ffactorau"
         '
-        'chk_A_PwysauNormal
+        'chk_C_Yfed
         '
-        Me.chk_A_PwysauNormal.AutoSize = True
-        Me.chk_A_PwysauNormal.Location = New System.Drawing.Point(6, 19)
-        Me.chk_A_PwysauNormal.Name = "chk_A_PwysauNormal"
-        Me.chk_A_PwysauNormal.Size = New System.Drawing.Size(112, 17)
-        Me.chk_A_PwysauNormal.TabIndex = 0
-        Me.chk_A_PwysauNormal.Text = "A. Pwysau Normal"
-        Me.chk_A_PwysauNormal.UseVisualStyleBackColor = True
+        Me.chk_C_Yfed.AutoSize = True
+        Me.chk_C_Yfed.Location = New System.Drawing.Point(6, 65)
+        Me.chk_C_Yfed.Name = "chk_C_Yfed"
+        Me.chk_C_Yfed.Size = New System.Drawing.Size(120, 17)
+        Me.chk_C_Yfed.TabIndex = 2
+        Me.chk_C_Yfed.Text = "C. Yfed yn gymedrol"
+        Me.chk_C_Yfed.UseVisualStyleBackColor = True
         '
         'chk_B_DimSmygu
         '
@@ -79,15 +79,15 @@ Partial Class frmSefyllfa1
         Me.chk_B_DimSmygu.Text = "B. Dim Smygu"
         Me.chk_B_DimSmygu.UseVisualStyleBackColor = True
         '
-        'chk_C_Yfed
+        'chk_A_PwysauNormal
         '
-        Me.chk_C_Yfed.AutoSize = True
-        Me.chk_C_Yfed.Location = New System.Drawing.Point(6, 65)
-        Me.chk_C_Yfed.Name = "chk_C_Yfed"
-        Me.chk_C_Yfed.Size = New System.Drawing.Size(120, 17)
-        Me.chk_C_Yfed.TabIndex = 2
-        Me.chk_C_Yfed.Text = "C. Yfed yn gymedrol"
-        Me.chk_C_Yfed.UseVisualStyleBackColor = True
+        Me.chk_A_PwysauNormal.AutoSize = True
+        Me.chk_A_PwysauNormal.Location = New System.Drawing.Point(6, 19)
+        Me.chk_A_PwysauNormal.Name = "chk_A_PwysauNormal"
+        Me.chk_A_PwysauNormal.Size = New System.Drawing.Size(112, 17)
+        Me.chk_A_PwysauNormal.TabIndex = 0
+        Me.chk_A_PwysauNormal.Text = "A. Pwysau Normal"
+        Me.chk_A_PwysauNormal.UseVisualStyleBackColor = True
         '
         'btnSefyllfa1
         '
@@ -154,7 +154,7 @@ Partial Class frmSefyllfa1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(307, 291)
+        Me.ClientSize = New System.Drawing.Size(307, 409)
         Me.Controls.Add(Me.btnSefyllfa4)
         Me.Controls.Add(Me.btnSefyllfa3)
         Me.Controls.Add(Me.btnSefyllfa2)
