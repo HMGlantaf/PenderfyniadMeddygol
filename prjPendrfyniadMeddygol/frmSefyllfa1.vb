@@ -292,4 +292,34 @@ Public Class frmSefyllfa1
         objStreamWriter.Close()
 
     End Sub
+
+    Private Sub btnAdfer_Click(sender As Object, e As EventArgs) Handles btnAdfer.Click
+        'Adfer data o ffeil
+        Dim objStreamReader As StreamReader 'Galluogi darllen o ffeil
+
+        'Gosod gwerthoedd cychwynol y 3 ffactor
+        Dim A As Boolean = False
+        Dim B As Boolean = False
+        Dim C As Boolean = False
+        Dim CofA As String
+        Dim CofB As String
+        Dim CofC As String
+
+        'Enw'r claf
+        Dim Enw As String = ""
+        'Cofnod arbed
+        Dim Cofnod() As String
+        'creu sianel newydd i ddarllen o ffeil
+        objStreamReader = New StreamReader("data.txt")
+
+        'Darllen y data
+        Cofnod = File.ReadAllLines(Dir$("data.txt"))
+        For Each rhes In Cofnod
+            MsgBox(rhes)
+        Next
+
+        'Cau'r sianel [ffeil]
+        objStreamReader.Close()
+
+    End Sub
 End Class
