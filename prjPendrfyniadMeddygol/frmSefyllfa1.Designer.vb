@@ -154,7 +154,7 @@ Partial Class frmSefyllfa1
         '
         'btnArbed
         '
-        Me.btnArbed.Location = New System.Drawing.Point(230, 256)
+        Me.btnArbed.Location = New System.Drawing.Point(387, 261)
         Me.btnArbed.Name = "btnArbed"
         Me.btnArbed.Size = New System.Drawing.Size(64, 47)
         Me.btnArbed.TabIndex = 10
@@ -163,7 +163,7 @@ Partial Class frmSefyllfa1
         '
         'btnAdfer
         '
-        Me.btnAdfer.Location = New System.Drawing.Point(231, 309)
+        Me.btnAdfer.Location = New System.Drawing.Point(387, 340)
         Me.btnAdfer.Name = "btnAdfer"
         Me.btnAdfer.Size = New System.Drawing.Size(64, 47)
         Me.btnAdfer.TabIndex = 11
@@ -174,7 +174,7 @@ Partial Class frmSefyllfa1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(307, 409)
+        Me.ClientSize = New System.Drawing.Size(463, 409)
         Me.Controls.Add(Me.btnAdfer)
         Me.Controls.Add(Me.btnArbed)
         Me.Controls.Add(Me.btnSefyllfa4)

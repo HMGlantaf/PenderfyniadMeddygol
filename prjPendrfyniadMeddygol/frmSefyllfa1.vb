@@ -12,6 +12,7 @@ Public Class frmSefyllfa1
     Dim Cyfanswm2 As Integer = 0
     Dim Cyfanswm3 As Integer = 0
     Dim Cyfanswm4 As Integer = 0
+
     'Cyfrif y nifer sy'n cael gwrthod llawdriniaeth
     Dim Gwrthod1 As Integer = 0
     Dim Gwrthod2 As Integer = 0
@@ -301,23 +302,59 @@ Public Class frmSefyllfa1
         Dim A As Boolean = False
         Dim B As Boolean = False
         Dim C As Boolean = False
-        Dim CofA As String
-        Dim CofB As String
-        Dim CofC As String
 
-        'Enw'r claf
-        Dim Enw As String = ""
+        'Enw sydd wedi storio
+        Dim Enw As String = txtEnw.Text
         'Cofnod arbed
-        Dim Cofnod() As String
+        Dim Cofnod As String
+
+        'Dynodwr i ddynodi os yw'r cofnod wedi ei ddarganfod
+        Dim Darganfod As Boolean = False
+
         'creu sianel newydd i ddarllen o ffeil
         objStreamReader = New StreamReader("data.txt")
 
         'Darllen y data
-        Cofnod = File.ReadAllLines(Dir$("data.txt"))
-        For Each rhes In Cofnod
-            MsgBox(rhes)
-        Next
+        'Cofnod = File.ReadAllLines(Dir$("data.txt"))
+        'For Each rhes In Cofnod
+        '    MsgBox(rhes)
+        'Next
 
+        Do While Not (objStreamReader.EndOfStream) And Not (Darganfod)
+            Dim Eitemau() As String
+            Cofnod = objStreamReader.ReadLine
+            MsgBox(Cofnod)
+            Eitemau = Cofnod.Split(",")
+            If Enw = Eitemau(0) Then
+                'wedi darganfod
+                Darganfod = True
+                'Gosod y gwerthoedd
+                If Eitemau(1) = "1" Then
+                    A = True
+                Else
+                    A = False
+                End If
+                If Eitemau(2) = "1" Then
+                    B = True
+                Else
+                    B = False
+                End If
+                If Eitemau(3) = "1" Then
+                    C = True
+                Else
+                    C = False
+                End If
+            End If
+        Loop
+        If Darganfod Then
+            'Gosod y gwerthoedd ar y ffurflen
+            txtEnw.Text = Enw
+            chk_A_PwysauNormal.Checked = A
+            chk_B_DimSmygu.Checked = B
+            chk_C_Yfed.Checked = C
+        Else
+            MsgBox("Heb ddarganfod " & Enw)
+        End If
         'Cau'r sianel [ffeil]
         objStreamReader.Close()
 
