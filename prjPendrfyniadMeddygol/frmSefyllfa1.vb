@@ -47,24 +47,28 @@ Public Class frmSefyllfa1
 
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
+        'Dilysu Enw
+        If Enw <> "" Then
+            'Ychwanegu at y cyfanswm
+            Cyfanswm1 = Cyfanswm1 + 1
+            'Penderfynu os yw'n gallu derbyn triniaeth
+            If A Or B Or C Then 'gallu
+                Triniaeth = True
+            Else 'Dim yn gallu
+                Triniaeth = False
+                'Darganfod y rheswm am wrthod
+                Y_Rheswm(Rheswm, A, B, C)
+                'Ychwanegu at y nifer sy'n cael ei gwrthod
+                Gwrthod1 = Gwrthod1 + 1
+            End If
 
-        'Ychwanegu at y cyfanswm
-        Cyfanswm1 = Cyfanswm1 + 1
-        'Penderfynu os yw'n gallu derbyn triniaeth
-        If A Or B Or C Then 'gallu
-            Triniaeth = True
-        Else 'Dim yn gallu
-            Triniaeth = False
-            'Darganfod y rheswm am wrthod
-            Y_Rheswm(Rheswm, A, B, C)
-            'Ychwanegu at y nifer sy'n cael ei gwrthod
-            Gwrthod1 = Gwrthod1 + 1
+            'Allbynnu'r penderfyniad
+            Allbwn(Enw, Triniaeth, Rheswm)
+            Canran1 = Gwrthod1 / Cyfanswm1
+            lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 1 = " & FormatPercent(Canran1, 2) & "%"
+        Else
+            MsgBox("Enw yn annilys")
         End If
-
-        'Allbynnu'r penderfyniad
-        Allbwn(Enw, Triniaeth, Rheswm)
-        Canran1 = Gwrthod1 / Cyfanswm1
-        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 1 = " & FormatPercent(Canran1, 2) & "%"
     End Sub
 
     Private Sub btnSefyllfa2_Click(sender As Object, e As EventArgs) Handles btnSefyllfa2.Click
@@ -89,27 +93,30 @@ Public Class frmSefyllfa1
 
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
+        'Dilysu Enw
+        If Enw <> "" Then
+            'Ychwanegu at y cyfanswm
+            Cyfanswm2 = Cyfanswm2 + 1
 
-        'Ychwanegu at y cyfanswm
-        Cyfanswm2 = Cyfanswm2 + 1
+            'Penderfynu os yw'n gallu derbyn triniaeth
+            If A And B And C Then 'gallu
+                Triniaeth = True
+            Else 'Dim yn gallu
+                Triniaeth = False
+                'Darganfod y rheswm am wrthod
+                Y_Rheswm(Rheswm, A, B, C)
+                'Cynyddu nifer sy'n cael eu gwrthod
+                Gwrthod2 = Gwrthod2 + 1
+            End If
 
-        'Penderfynu os yw'n gallu derbyn triniaeth
-        If A And B And C Then 'gallu
-            Triniaeth = True
-        Else 'Dim yn gallu
-            Triniaeth = False
-            'Darganfod y rheswm am wrthod
-            Y_Rheswm(Rheswm, A, B, C)
-            'Cynyddu nifer sy'n cael eu gwrthod
-            Gwrthod2 = Gwrthod2 + 1
+            'Allbynnu'r penderfyniad
+            Allbwn(Enw, Triniaeth, Rheswm)
+            'Darganfod ac allbynnu canran gwrthod
+            Canran2 = Gwrthod2 / Cyfanswm2
+            lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 2 = " & FormatPercent(Canran2, 2) & "%"
+        Else
+            MsgBox("Enw yn annilys")
         End If
-
-        'Allbynnu'r penderfyniad
-        Allbwn(Enw, Triniaeth, Rheswm)
-        'Darganfod ac allbynnu canran gwrthod
-        Canran2 = Gwrthod2 / Cyfanswm2
-        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 2 = " & FormatPercent(Canran2, 2) & "%"
-
     End Sub
 
     Private Sub btnSefyllfa3_Click(sender As Object, e As EventArgs) Handles btnSefyllfa3.Click
@@ -134,28 +141,31 @@ Public Class frmSefyllfa1
 
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
+        'Dilysu Enw
+        If Enw <> "" Then
+            'Ychwanegu at y cyfanswm
+            Cyfanswm3 = Cyfanswm3 + 1
 
-        'Ychwanegu at y cyfanswm
-        Cyfanswm3 = Cyfanswm3 + 1
+            'Penderfynu os yw'n gallu derbyn triniaeth
+            If (A And B) Or (A And C) Or (B And C) Then 'gallu
+                'If A And (B Or C) Or (B And C) Then 'gallu
+                Triniaeth = True
+            Else 'Dim yn gallu
+                Triniaeth = False
+                'Darganfod y rheswm am wrthod
+                Y_Rheswm(Rheswm, A, B, C)
+                'Cynyddu nifer sy'n cael eu gwrthod
+                Gwrthod3 = Gwrthod3 + 1
+            End If
 
-        'Penderfynu os yw'n gallu derbyn triniaeth
-        If (A And B) Or (A And C) Or (B And C) Then 'gallu
-            'If A And (B Or C) Or (B And C) Then 'gallu
-            Triniaeth = True
-        Else 'Dim yn gallu
-            Triniaeth = False
-            'Darganfod y rheswm am wrthod
-            Y_Rheswm(Rheswm, A, B, C)
-            'Cynyddu nifer sy'n cael eu gwrthod
-            Gwrthod3 = Gwrthod3 + 1
+            'Allbynnu'r penderfyniad
+            Allbwn(Enw, Triniaeth, Rheswm)
+            'Darganfod ac allbynnu canran gwrthod
+            Canran3 = Gwrthod3 / Cyfanswm3
+            lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 3 = " & FormatPercent(Canran3, 2) & "%"
+        Else
+            MsgBox("Enw yn annilys")
         End If
-
-        'Allbynnu'r penderfyniad
-        Allbwn(Enw, Triniaeth, Rheswm)
-        'Darganfod ac allbynnu canran gwrthod
-        Canran3 = Gwrthod3 / Cyfanswm3
-        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 3 = " & FormatPercent(Canran3, 2) & "%"
-
     End Sub
 
     Private Sub btnSefyllfa4_Click(sender As Object, e As EventArgs) Handles btnSefyllfa4.Click
@@ -183,25 +193,29 @@ Public Class frmSefyllfa1
 
         'Darllen mewnbwn
         Mewnbwn(Enw, A, B, C)
+        'Dilysu Enw
+        If Enw <> "" Then
+            'Penderfynu os yw'n gallu derbyn triniaeth
+            If (A And B) Or (A And C) Or (B And C) Or B Then 'gallu
+                'If A And (B Or C) Or B Then 'gallu
+                'If B Or (A And C) Then Then 'gallu
+                Triniaeth = True
+            Else 'Dim yn gallu
+                Triniaeth = False
+                'Darganfod y rheswm am wrthod
+                Y_Rheswm(Rheswm, A, B, C)
+                'Cynyddu nifer sy'n cael eu gwrthod
+                Gwrthod4 = Gwrthod4 + 1
+            End If
 
-        'Penderfynu os yw'n gallu derbyn triniaeth
-        If (A And B) Or (A And C) Or (B And C) Or B Then 'gallu
-            'If A And (B Or C) Or B Then 'gallu
-            Triniaeth = True
-        Else 'Dim yn gallu
-            Triniaeth = False
-            'Darganfod y rheswm am wrthod
-            Y_Rheswm(Rheswm, A, B, C)
-            'Cynyddu nifer sy'n cael eu gwrthod
-            Gwrthod4 = Gwrthod4 + 1
+            'Allbynnu'r penderfyniad
+            Allbwn(Enw, Triniaeth, Rheswm)
+            'Darganfod ac allbynnu canran gwrthod
+            Canran4 = Gwrthod4 / Cyfanswm4
+            lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 4 = " & FormatPercent(Canran4, 2) & "%"
+        Else
+            MsgBox("Enw yn annilys")
         End If
-
-        'Allbynnu'r penderfyniad
-        Allbwn(Enw, Triniaeth, Rheswm)
-        'Darganfod ac allbynnu canran gwrthod
-        Canran4 = Gwrthod4 / Cyfanswm4
-        lblPenderfyniad.Text = lblPenderfyniad.Text & vbCrLf & "Canran wedi eu gwrthod o dan sefyllfa 4 = " & FormatPercent(Canran4, 2) & "%"
-
     End Sub
 
     Private Sub Mewnbwn(ByRef Enw As String, ByRef A As Boolean, ByRef B As Boolean, ByRef C As Boolean)
